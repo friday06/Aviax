@@ -23,7 +23,7 @@ RUN /venv/bin/pip3 install -U -r requirements.txt
 FROM base AS deployment
 
 RUN apk add postgresql neofetch
-	
+
 COPY --from=builder /venv /venv
 COPY . .
 
