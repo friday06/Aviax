@@ -84,15 +84,20 @@ def ban(update: Update, context: CallbackContext) -> str:
             message.reply_text("This user has immunity and cannot be banned.")
         return log_message
 
-    if message.text.startswith("/d") and message.reply_to_message:
-        message.reply_to_message.delete()
+    if message.text.startswith("/d") or message.text.startswith("!d"):
+        dban = True
+        if not can_delete(chat, context.bot.id):
+            return ""
+        else:
+            dban = False
 
-    if message.text.startswith("/s"):
+    if message.text.startswith("/s") or message.text.startswith("!s"):
         silent = True
         if not can_delete(chat, context.bot.id):
             return ""
     else:
         silent = False
+
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#{'S' if silent else ''}BANNED\n"
@@ -105,6 +110,11 @@ def ban(update: Update, context: CallbackContext) -> str:
     try:
         chat.ban_member(user_id)
 
+        if dban:
+            if message.reply_to_message:
+                message.reply_to_message.delete()
+            return log
+        
         if silent:
             if message.reply_to_message:
                 message.reply_to_message.delete()
@@ -117,7 +127,7 @@ def ban(update: Update, context: CallbackContext) -> str:
         )
         if reason:
             reply += f"\n<code> </code><b>•  Reason:</b> \n{html.escape(reason)}"
-        bot.sendMessage(chat.id, reply, parse_mode=ParseMode.HTML, quote=False)
+        bot.sendMessage(chat.id, reply, parse_mode=ParseMode.HTML)
         return log
 
     except BadRequest as excp:
