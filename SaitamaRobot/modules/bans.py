@@ -114,7 +114,7 @@ def ban(update: Update, context: CallbackContext) -> str:
             if message.reply_to_message:
                 message.reply_to_message.delete()
             return log
-        
+
         if silent:
             if message.reply_to_message:
                 message.reply_to_message.delete()
