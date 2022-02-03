@@ -88,8 +88,8 @@ def ban(update: Update, context: CallbackContext) -> str:
         dban = True
         if not can_delete(chat, context.bot.id):
             return ""
-        else:
-            dban = False
+    else:
+        dban = False
 
     if message.text.startswith("/s") or message.text.startswith("!s"):
         silent = True
