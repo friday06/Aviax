@@ -1,22 +1,21 @@
-import os
 import math
-import requests
+import os
 import urllib.request as urllib
-from PIL import Image
-from html import escape
 from collections import namedtuple
+from html import escape
 
-from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
-from telegram import TelegramError, Update
+import cloudscraper
+import lxml.html
+import requests
+from PIL import Image
+from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
+                      TelegramError, Update)
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
 
 from SaitamaRobot import dispatcher
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 from SaitamaRobot.modules.helper_funcs.alternate import typing_action
-
-import cloudscraper
-import lxml.html
 
 scrapper = cloudscraper.create_scraper()
 
