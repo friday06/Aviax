@@ -83,8 +83,7 @@ def gitpull(update: Update, context: CallbackContext):
 
     sent_msg.edit_text("Restarted.")
 
-    os.system("restart.bat")
-    os.execv("start.bat", sys.argv)
+    os.execvp(sys.executable, [sys.executable, "-m", "SaitamaRobot"])
 
 
 @dev_plus
@@ -93,8 +92,7 @@ def restart(update: Update, context: CallbackContext):
         "Starting a new instance and shutting down this one",
     )
 
-    os.system("restart.bat")
-    os.execv("start.bat", sys.argv)
+    os.execvp(sys.executable, [sys.executable, "-m", "SaitamaRobot"])
 
 
 LEAVE_HANDLER = CommandHandler("leave", leave, run_async=True)
