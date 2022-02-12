@@ -228,8 +228,7 @@ def kang(update: Update, context: CallbackContext):
                 elif e.message == "Invalid sticker emojis":
                     msg.reply_text("Invalid emoji(s).")
                 elif e.message == "Stickers_too_much":
-                    msg.reply_text(
-                        "Max packsize reached. Press F to pay respecc.")
+                    msg.reply_text("Max packsize reached. Press F to pay respecc.")
                 elif e.message == "Internal Server Error: sticker set not found (500)":
                     msg.reply_text(
                         "Sticker successfully added to [pack](t.me/addstickers/%s)"
@@ -241,8 +240,7 @@ def kang(update: Update, context: CallbackContext):
                 print(e)
 
         elif is_animated:
-            packname = "animated" + str(user.id) + \
-                "_by_" + context.bot.username
+            packname = "animated" + str(user.id) + "_by_" + context.bot.username
             packname_found = 0
             max_stickers = 50
             while packname_found == 0:
@@ -476,7 +474,7 @@ def makepack_internal(
     packnum,
     png_sticker=None,
     tgs_sticker=None,
-    webm_sticker=None
+    webm_sticker=None,
 ):
     name = user.first_name
     name = name[:50]
@@ -545,8 +543,7 @@ def makepack_internal(
             parse_mode=ParseMode.MARKDOWN,
         )
     else:
-        msg.reply_text(
-            "Failed to create sticker pack. Possibly due to blek mejik.")
+        msg.reply_text("Failed to create sticker pack. Possibly due to blek mejik.")
 
 
 __help__ = """
@@ -557,13 +554,10 @@ __help__ = """
 """
 
 __mod_name__ = "Stickers"
-STICKERID_HANDLER = DisableAbleCommandHandler(
-    "stickerid", stickerid, run_async=True)
+STICKERID_HANDLER = DisableAbleCommandHandler("stickerid", stickerid, run_async=True)
 GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker)
-KANG_HANDLER = DisableAbleCommandHandler(
-    "kang", kang, admin_ok=True, run_async=True)
-STICKERS_HANDLER = DisableAbleCommandHandler(
-    "stickers", cb_sticker, run_async=True)
+KANG_HANDLER = DisableAbleCommandHandler("kang", kang, admin_ok=True, run_async=True)
+STICKERS_HANDLER = DisableAbleCommandHandler("stickers", cb_sticker, run_async=True)
 
 dispatcher.add_handler(STICKERS_HANDLER)
 dispatcher.add_handler(STICKERID_HANDLER)
