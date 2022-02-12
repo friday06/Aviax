@@ -8,8 +8,11 @@ import cloudscraper
 import lxml.html
 import requests
 from PIL import Image
-from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
-                      TelegramError, Update)
+from telegram import InlineKeyboardButton
+from telegram import InlineKeyboardMarkup
+from telegram import ParseMode
+from telegram import TelegramError
+from telegram import Update
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
 
