@@ -71,7 +71,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hi {}, my name is {}!
-I am an Anime themed group management bot.
+I am a next generation powerfull group management bot.
 You can find my list of available commands with /help.
 """
 
@@ -95,7 +95,7 @@ And the following:
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-SAITAMA_IMG = "https://telegra.ph/file/0576731c890d2cf9cecce.jpg"
+SAITAMA_IMG = "https://telegra.ph/Aviax-02-24"
 
 DONATE_STRING = """ Won't be necessary as of now."""
 
@@ -218,7 +218,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="☑️ Add Clara to your group",
+                                text="☑️ Add Aviax to your group",
                                 url="t.me/{}?startgroup=true".format(
                                     context.bot.username,
                                 ),
@@ -227,23 +227,17 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="🚑 Support Group",
-                                url=f"https://t.me/{SUPPORT_CHAT}",
+                                url=f"https://t.me/YamlokSupport",
                             ),
                             InlineKeyboardButton(
                                 text="🔔 Updates Channel",
-                                url="https://t.me/MissClaraChannel",
+                                url="https://t.me/YamlokOfficial",
                             ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="🗄 Source code",
-                                url="https://github.com/AnimeKaizoku/SaitamaRobot",
-                            )
                         ],
                         [
                             InlineKeyboardButton(
                                 text="📕 Help & Commands",
-                                url="http://t.me/MissClaraBot?start=help",
+                                url="http://t.me/AviaxBeatzBot?start=help",
                             )
                         ],
                     ]
