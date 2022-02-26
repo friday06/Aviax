@@ -14,21 +14,21 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 123456  # integer value, dont use ""
-    API_HASH = "awoo"
-    TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    OWNER_ID = 792109647  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "Sawada"
-    SUPPORT_CHAT = "OnePunchSupport"  # Your own group for support, do not add the @
+    API_ID = 2984107  # integer value, dont use ""
+    API_HASH = "4ce83ad7d954da391c659c6d7d76e0ce"
+    TOKEN = "5060064564:AAEwhDnuO838fRT2WCdbUTBT4w-y1DAK6ck"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    OWNER_ID = 1689542319  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "RahulChoudhary17"
+    SUPPORT_CHAT = "YamlokSupport"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
-        -1001253661229
+        -1001633114368
     )  # Prints any new group the bot is added to, prints just the name and ID.
     EVENT_LOGS = (
-        -1001190806654
+        -1001633114368
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules # its "URI" and not "URL" as heroku and similar ones only accept it as such
+    SQLALCHEMY_DATABASE_URI = "postgres://razcpdlc:HKwkMuLQAopiJcHQ36C2PGdQoG73gFOE@jelani.db.elephantsql.com/razcpdlc"  # needed for any database modules # its "URI" and not "URL" as heroku and similar ones only accept it as such
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
@@ -37,11 +37,11 @@ class Config(object):
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
-    DRAGONS = get_user_list("elevated_users.json", "sudos")
+    DRAGONS = get_user_list("elevated_users.json", "1689542319 5275544717")
     ##List of id's - (not usernames) for developers who will have the same perms as the owner
-    DEV_USERS = get_user_list("elevated_users.json", "devs")
+    DEV_USERS = get_user_list("elevated_users.json", "1689542319 5275544717")
     ##List of id's (not usernames) for users which are allowed to gban, but can also be banned.
-    DEMONS = get_user_list("elevated_users.json", "supports")
+    DEMONS = get_user_list("elevated_users.json", "1689542319 5275544717")
     # List of id's (not usernames) for users which WONT be banned/kicked by the bot.
     TIGERS = get_user_list("elevated_users.json", "tigers")
     WOLVES = get_user_list("elevated_users.json", "whitelists")
