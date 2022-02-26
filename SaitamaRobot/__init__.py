@@ -77,8 +77,7 @@ if ENV:
     TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
     WALL_API = os.environ.get("WALL_API", None)
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
-    ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-
+    
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
     except ValueError:
@@ -96,7 +95,6 @@ else:
 
     JOIN_LOGGER = Config.JOIN_LOGGER
     OWNER_USERNAME = Config.OWNER_USERNAME
-    ALLOW_CHATS = Config.ALLOW_CHATS
     try:
         DRAGONS = set(int(x) for x in Config.DRAGONS or [])
         DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
