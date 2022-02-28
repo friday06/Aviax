@@ -1,15 +1,15 @@
-![Clara](https://wallpapercave.com/uwp/uwp82462.jpeg)
+![Aviax](https://wallpapercave.com/uwp/uwp82462.jpeg)
 # Miss Clara
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6141417ceaf84545bab6bd671503df51)](https://app.codacy.com/gh/AnimeKaizoku/SaitamaRobot?utm_source=github.com&utm_medium=referral&utm_content=AnimeKaizoku/SaitamaRobot&utm_campaign=Badge_Grade_Settings)  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/AnimeKaizoku/SaitamaRobot/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 
 
 A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed persona to make Saitama suitable for Anime and Manga group chats.
 
-Can be found on telegram as [Clara](https://t.me/MissClaraBot).
+Can be found on telegram as [Aviax](https://t.me/MissClaraBot).
 
-The Support group can be reached out to at [Clara Bot Support ](https://t.me/MissClaraSupport), where you can ask for help about [MissClara](https://t.me/MissClaraBot), discover/request new features, report bugs, and stay in the loop whenever a new update is available.
+The Support group can be reached out to at [Aviax Bot Support ](https://t.me/AviaxSupport), where you can ask for help about [AviaX](https://t.me/MissClaraBot), discover/request new features, report bugs, and stay in the loop whenever a new update is available.
 
-[Clara Updates Channel](https://t.me/MissClaraChannel)
+[Aviax Updates Channel](https://t.me/MissClaraChannel)
 
 ## How to setup/deploy.
 
